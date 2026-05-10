@@ -75,28 +75,42 @@ export const NoticeForm: React.FC<Props> = ({
   const { primaryDependents } = getDependentFields();
   return (
     <form onSubmit={onSubmit}>
-      <TextField
-        {...register('title')}
-        error={Boolean(errors.title)}
-        helperText={errors.title?.message}
-        type='text'
-        label='Title'
-        fullWidth
-        size='small'
-        sx={{ marginTop: '20px' }}
+      <Controller
+        name='title'
+        control={control}
+        render={({ field: { onChange, value }, fieldState: { error } }) => (
+          <TextField
+            value={value}
+            onChange={onChange}
+            error={Boolean(error)}
+            helperText={error?.message}
+            type='text'
+            label='Title'
+            fullWidth
+            size='small'
+            sx={{ marginTop: '20px' }}
+          />
+        )}
       />
-      <TextField
-        {...register('description')}
-        error={Boolean(errors.description)}
-        helperText={errors.description?.message}
-        type='text'
-        label='Description'
-        size='small'
-        multiline
-        minRows={3}
-        maxRows={10}
-        fullWidth
-        sx={{ marginTop: '30px' }}
+      <Controller
+        name='description'
+        control={control}
+        render={({ field: { onChange, value }, fieldState: { error } }) => (
+          <TextField
+            value={value}
+            onChange={onChange}
+            error={Boolean(error)}
+            helperText={error?.message}
+            type='text'
+            label='Description'
+            size='small'
+            multiline
+            minRows={3}
+            maxRows={10}
+            fullWidth
+            sx={{ marginTop: '30px' }}
+          />
+        )}
       />
       <FormControl
         sx={{ marginTop: '30px', minWidth: { xs: '100%', md: '350px' } }}
