@@ -13,7 +13,7 @@ const app = express();
 
 const corsOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(",").map((origin) => origin.trim())
-  : [];
+  : ["http://localhost:5173"];
 
 const corsOptions = {
   origin: function (origin, callback) {
