@@ -209,6 +209,9 @@ backend/src/
 2. Push your results to a public repository
 3. Share the repository link along with a short Loom video demonstrating your results.
 
+## Demo Video
+https://drive.google.com/drive/folders/14WEuMni9Ozj-MDg5g9Qzyrv0Y_stBMIQ?usp=drive_link
+
 ## 🆘 Support
 
 For questions and support:
