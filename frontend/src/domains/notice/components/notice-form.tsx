@@ -40,7 +40,7 @@ export const NoticeForm: React.FC<Props> = ({
 }) => {
   const [getRecipients] = useLazyGetNoticeRecipientListQuery();
   const {
-    register,
+    //register,
     formState: { errors },
     control,
     watch
