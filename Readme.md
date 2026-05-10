@@ -20,6 +20,20 @@ skill-test/
 - PostgreSQL (v12 or higher)
 - npm or yarn
 
+
+## Alternative Docker Setup
+
+Requirements:
+- Docker
+- Docker Compose
+
+First-time setup:
+
+```bash
+docker compose up -d --build
+```
+then we can skip the following step1, step2 and database creation
+
 ### 1. Backend Setup
 ```bash
 cd backend
